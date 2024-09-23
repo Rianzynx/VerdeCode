@@ -1,0 +1,439 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Estilos gerais do corpo */
+body, html {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("../imagens/fundo.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #ffffff;
+    background-position: 0 88%;
+    overflow-x: hidden; /* Evita a rolagem horizontal */
+}
+
+/* Estilos do cabeçalho */
+header {
+    padding: 15px 0;
+    height: 200px; /* Ajustado para auto */
+    position: relative;
+}
+
+#logo {
+    margin-left: 0px;
+    top: -85%;
+    width: 100%; /* Ajustado para 100% */
+    max-width: 300px; /* Limita o tamanho máximo */
+    height: auto; /* Altura automática */
+    position: relative;
+}
+
+/* Estilos da barra de busca */
+#divBusca {
+    position: absolute; /* Mantenha como absoluto */
+    width: 300px; /* Largura total menos margens */
+    display: none; /* Inicialmente oculto */
+    transition: display 0.3s ease;
+    background: white;
+    top: 20%;
+    right: 8%;
+    border-radius: 5PX;
+    animation-name: opacityBus;
+    animation-duration: 2s;
+    box-shadow: 2px 2px 20px black;
+}
+
+@keyframes opacityBus {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#btnBusca {
+    position: absolute; /* Mantenha a posição absoluta da lupa */
+    right: 5%; /* Distância da direita dentro da barra de busca */
+    top: 20%; /* Distância do topo */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    width: 30px;
+    height: auto;
+    filter: brightness(0) invert(1); /* Torna a imagem branca */
+}
+
+#txtBusca {
+    padding-left: 10px;
+    background-color: transparent;
+    font-style: italic;
+    font-size: 15px;
+    border: none;
+    height: 30px;
+    width: calc(100% - 30px); /* Ajuste a largura para o espaço da lupa */
+}
+
+#txtBusca:focus {
+    outline: none;
+}
+
+
+
+
+/* Estilos do menu de navegação */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 40%;
+    top: 30%;
+    transform: translate(0%, -50%);
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-shadow: 2px 2px 5px #000000;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 22px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #dfdfdf;
+    transform: scale(1.1);
+}
+
+#menu-toggle {
+    cursor: pointer;
+    color: #ffffff;
+    font-weight: bold;
+    margin-left: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-100%, 300%);
+    display: none;
+}
+
+nav ul.show {
+    display: flex; /* Mostra o menu */
+}
+
+
+
+
+/* Estilos gerais do main */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+main h1, main h2 {
+    color: #ffffff;
+}
+
+main p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Estilos da seção de home */
+#home {
+    width: 100%;
+    height: 700px;
+    border-radius: 10px;
+}
+
+#home h1 {
+    margin-top: 7%;
+    font-size: 40px;
+    font-family: "Amaranth", sans-serif;
+    animation-duration: 3s;
+    animation-name: moveRight;
+}
+
+@keyframes moveRight {
+    from {
+        transform: translateX(-500px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+#seta img {
+    width: 120px;
+    height: 190px;
+    animation-duration: 3s;
+    animation-name: Movetop;
+}
+
+@keyframes Movetop {
+    from {
+        transform: translateY(200px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+#carrossel {
+    margin-top: 2%;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    opacity: 0; /* Invisível inicialmente */
+    transition: opacity 2s ease-out; /* Transição suave de 2 segundos */
+}
+
+#carrossel.animated {
+    opacity: 1; /* Tornar visível */
+}
+
+/* Estilos do carrossel */
+.carrossel-imagens img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Botões de navegação do carrossel */
+.slick-prev, .slick-next {
+    background-color: #1daf1d !important;
+    border-radius: 50% !important;
+    font-size: 20px !important;
+    padding: 15px;
+    cursor: pointer !important;
+    transition: background-color 0.3s ease !important;
+}
+
+.slick-prev:hover, .slick-next:hover {
+    background-color: #063001 !important;
+}
+
+.slick-prev {
+    left: 10px !important;
+}
+
+.slick-next {
+    right: 10px !important;
+}
+
+/* Estilos da seção de produtos */
+#produtos {
+    width: 100%;
+    background: white;
+    margin-top: 15%;
+    border-radius: 10px;
+    padding: 20px;
+    opacity: 0; /* Invisível inicialmente */
+    transition: opacity 1s ease-out; /* Transição suave */
+}
+
+#produtos.animated {
+    opacity: 1; /* Tornar visível */
+}
+
+#produtos h1 {
+    text-align: center;
+    color: #092b10;
+    padding: 20px;
+    font-family: "Amaranth", sans-serif;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Diminuir o espaçamento entre os cartões */
+    justify-content: space-between;
+}
+
+.product-card {
+    width: 24%; /* Ajusta para 4 colunas em telas grandes */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff; /* Fundo branco para destacar o conteúdo */
+    transition: transform 0.2s, box-shadow 0.2s; /* Efeito de hover */
+    overflow: hidden; /* Para manter os bordas arredondadas */
+    padding: 0 20px;
+    position: relative;
+    margin-top: 5%;
+}
+
+.product-card:hover {
+    transform: translateY(-5px); /* Efeito de levitação */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra mais intensa no hover */
+}
+
+.offer-label {
+    background-color: #ff6347; /* Cor de fundo para o rótulo de oferta */
+    color: white; /* Texto branco */
+    padding: 5px 10px;
+    position: absolute; /* Para posicionar no canto */
+    top: 10px;
+    left: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.wishlist-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: rgb(255, 69, 69);
+}
+
+.product-image img {
+    width: 100%;
+    height: 200px; /* Altura fixa para a imagem */
+    object-fit: cover; /* Manter a proporção da imagem */
+    border-bottom: 1px solid #ddd; /* Linha abaixo da imagem */
+}
+
+.product-details {
+    padding: 15px; /* Espaçamento interno */
+}
+
+.price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px; /* Espaçamento abaixo */
+}
+
+.current-price {
+    font-size: 20px; /* Tamanho da fonte do preço atual */
+    font-weight: bold; /* Destacar o preço atual */
+    color: #28a745; /* Cor verde */
+}
+
+.old-price {
+    text-decoration: line-through; /* Riscar o preço antigo */
+    color: #888; /* Cor mais clara para o preço antigo */
+}
+
+.discount {
+    background-color: #ffeb3b; /* Fundo amarelo para desconto */
+    color: #000; /* Texto preto */
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold; /* Destacar o desconto */
+}
+
+.product-name {
+    font-size: 16px; /* Tamanho da fonte do nome do produto */
+    margin-bottom: 10px; /* Espaçamento abaixo */
+    font-weight: 600; /* Destaque no nome do produto */
+    color: #000;
+}
+
+.add-to-cart button {
+    width: 100%; /* Botão ocupa toda a largura */
+    padding: 10px;
+    background-color: #2c7441; /* Cor de fundo azul */
+    color: white; /* Texto branco */
+    border: none;
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Efeito de hover */
+}
+
+.add-to-cart button:hover {
+    background-color: #54c754; /* Cor de fundo mais escura no hover */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #logo {
+        max-width: 300px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -80%);
+    }
+
+
+    #divBusca {
+        margin-top: 10%;
+        width: 100%;
+        position: absolute;
+        left: 0%;
+        border-radius: 0px;
+    }
+
+
+    #menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgb(27, 51, 20);
+        position: absolute;
+        top: 140%;
+        left: 0;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-decoration: underline wavy white;
+    }
+
+    #produtos {
+        margin-top: -5%;
+    }
+
+
+    .product-card {
+        width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 480px) {
+    #logo {
+        max-width: 300px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -80%);
+    }
+
+    #produtos {
+        margin-top: -20%;
+    }
+
+    .product-card {
+        width: 100%;
+    }
+
+    #carrossel {
+        height: 300px;
+    }
+}
+
+/* Estilos do rodapé */
+footer {
+    color: white;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    font-family: "Amaranth", sans-serif;
+}

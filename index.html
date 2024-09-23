@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VerdeCode</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="imagex/png" href="imagens/folhaIco.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Estilos do Slick Carousel -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+</head>
+<body>
+
+    <!-- Menu de navegação -->
+    <header>
+        <img src="imagens/logo.png" id="logo" alt="Logo da Empresa VerdeCode" class="logo">
+
+        
+        
+        <nav>
+            <div id="menu-toggle">MENU</div> <!-- Botão para abrir o menu -->
+            <ul id="menu">
+                <li><a href="#home">INICIO</a></li>
+                <li><a href="#produtos">PRODUTOS</a></li>
+                <li><a href="#sobre">SOBRE</a></li>
+                <li><a href="#contato">CONTATO</a></li>
+            </ul>
+        </nav>
+
+        <img src="imagens/procurar.png" id="btnBusca" alt="Buscar" />
+        <div id="divBusca">
+            <input type="text" id="txtBusca" placeholder="Digite o que você procura..." />
+        </div>
+        
+    </header>
+
+    <!-- Corpo do site -->
+    <main>
+        <section id="home">
+            <h1>POR QUE ESCOLHER NOSSOS PRODUTOS?</h1>
+
+            <div id="seta"><img src="imagens/setas.png" alt="Produto 1" class="banner-image"></div>
+
+            <section id="carrossel">
+                <div class="carrossel-imagens">
+                    <div><img src="imagens/meioambiente.png" alt="Produto 1"></div>
+                    <div><img src="imagens/promocao2.png" alt="Produto 2"></div>
+                    <div><img src="imagens/meioambiente.png" alt="Produto 3"></div>
+                    <div><img src="imagens/promocao2.png" alt="Produto 4"></div>
+                </div>
+            </section>
+        </section>
+
+        <section id="produtos">
+            <h1>PROMOÇÕES DE HOJE</h1>
+        
+            <div class="product-container">
+                <div class="product-card">
+                    <div class="offer-label">Oferta</div>
+                    <div class="wishlist-icon">
+                        <i class="fa fa-heart"></i>
+                    </div>
+                    <div class="product-image">
+                        <img src="imagens/batata.jpg" alt="Batata Lavada">
+                    </div>
+                    <div class="product-details">
+                        <div class="price">
+                            <span class="current-price">R$ 3,60</span>
+                            <span class="discount">-20%</span>
+                            <span class="old-price">R$ 4,50</span>
+                        </div>
+                        <div class="product-name">Batata Lavada kg</div>
+                    </div>
+                    <div class="add-to-cart">
+                        <button>+ Add</button>
+                    </div>
+                </div>
+                
+                <!-- Repita os cartões de produto com diferentes dados para os 10 produtos -->
+                
+                <div class="product-card">
+                    <div class="offer-label">Oferta</div>
+                    <div class="wishlist-icon">
+                        <i class="fa fa-heart"></i>
+                    </div>
+                    <div class="product-image">
+                        <img src="imagens/tomate.png" alt="Tomate">
+                    </div>
+                    <div class="product-details">
+                        <div class="price">
+                            <span class="current-price">R$ 3,60</span>
+                            <span class="discount">-20%</span>
+                            <span class="old-price">R$ 4,50</span>
+                        </div>
+                        <div class="product-name">Tomate kg</div>
+                    </div>
+                    <div class="add-to-cart">
+                        <button>+ Add</button>
+                    </div>
+                </div>
+        
+                <!-- Continue adicionando os outros produtos -->
+
+                <div class="product-card">
+                    <div class="offer-label">Oferta</div>
+                    <div class="wishlist-icon">
+                        <i class="fa fa-heart"></i>
+                    </div>
+                    <div class="product-image">
+                        <img src="imagens/cenoura1.png" alt="Cenoura">
+                    </div>
+                    <div class="product-details">
+                        <div class="price">
+                            <span class="current-price">R$ 3,60</span>
+                            <span class="discount">-20%</span>
+                            <span class="old-price">R$ 4,50</span>
+                        </div>
+                        <div class="product-name">Cenoura kg</div>
+                    </div>
+                    <div class="add-to-cart">
+                        <button>+ Add</button>
+                    </div>
+                </div>
+
+
+                <div class="product-card">
+                    <div class="offer-label">Oferta</div>
+                    <div class="wishlist-icon">
+                        <i class="fa fa-heart"></i>
+                    </div>
+                    <div class="product-image">
+                        <img src="imagens/cebola-roxa.png" alt="Cebola Roxa">
+                    </div>
+                    <div class="product-details">
+                        <div class="price">
+                            <span class="current-price">R$ 3,60</span>
+                            <span class="discount">-20%</span>
+                            <span class="old-price">R$ 4,50</span>
+                        </div>
+                        <div class="product-name">Cebola Roxa kg</div>
+                    </div>
+                    <div class="add-to-cart">
+                        <button>+ Add</button>
+                    </div>
+                </div>
+        
+                <!-- Mais produtos até completar os 10 -->
+
+                    <div class="product-card">
+                        <div class="offer-label">Oferta</div>
+                        <div class="wishlist-icon">
+                            <i class="fa fa-heart"></i>
+                        </div>
+                        <div class="product-image">
+                            <img src="imagens/alface.png" alt="Alface Verde">
+                        </div>
+                        <div class="product-details">
+                            <div class="price">
+                                <span class="current-price">R$ 3,60</span>
+                                <span class="discount">-20%</span>
+                                <span class="old-price">R$ 4,50</span>
+                            </div>
+                            <div class="product-name">Alface Un</div>
+                        </div>
+                        <div class="add-to-cart">
+                            <button>+ Add</button>
+                        </div>
+                    </div>
+        
+                        <div class="product-card">
+                            <div class="offer-label">Oferta</div>
+                            <div class="wishlist-icon">
+                                <i class="fa fa-heart"></i>
+                            </div>
+                            <div class="product-image">
+                                <img src="imagens/beterraba.png" alt="Beterraba">
+                            </div>
+                            <div class="product-details">
+                                <div class="price">
+                                    <span class="current-price">R$ 3,60</span>
+                                    <span class="discount">-20%</span>
+                                    <span class="old-price">R$ 4,50</span>
+                                </div>
+                                <div class="product-name">Beterraba kg</div>
+                            </div>
+                            <div class="add-to-cart">
+                                <button>+ Add</button>
+                            </div>
+                        </div>
+        
+                <!-- Outros cartões de produto... -->
+                <div class="product-card">
+                    <div class="offer-label">Oferta</div>
+                    <div class="wishlist-icon">
+                        <i class="fa fa-heart"></i>
+                    </div>
+                    <div class="product-image">
+                        <img src="imagens/salsinha.png" alt="Salsinha">
+                    </div>
+                    <div class="product-details">
+                        <div class="price">
+                            <span class="current-price">R$ 3,60</span>
+                            <span class="discount">-20%</span>
+                            <span class="old-price">R$ 4,50</span>
+                        </div>
+                        <div class="product-name">Salsinha Un</div>
+                    </div>
+                    <div class="add-to-cart">
+                        <button>+ Add</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="offer-label">Oferta</div>
+                    <div class="wishlist-icon">
+                        <i class="fa fa-heart"></i>
+                    </div>
+                    <div class="product-image">
+                        <img src="imagens/repolho.png" alt="Repolho">
+                    </div>
+                    <div class="product-details">
+                        <div class="price">
+                            <span class="current-price">R$ 3,60</span>
+                            <span class="discount">-20%</span>
+                            <span class="old-price">R$ 4,50</span>
+                        </div>
+                        <div class="product-name">Repolho Un</div>
+                    </div>
+                    <div class="add-to-cart">
+                        <button>+ Add</button>
+                    </div>
+                </div>
+        
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Todos os direitos reservados. Empresa VerdeCode.</p>
+    </footer>
+
+    <!-- Scripts do Slick Carousel -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.carrossel-imagens').slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 1000,
+                prevArrow: '<button type="button" class="slick-prev"></button>',
+                nextArrow: '<button type="button" class="slick-next"></button>',
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            infinite: true,
+                            dots: true
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+
+<script src="js/animacao.js"></script>
+
+</body>
+</html>
